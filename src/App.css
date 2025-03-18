@@ -71,7 +71,7 @@ nav ul {
 Nav a {
   color: #fff;
   text-decoration: none;
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(0.4rem, 2vw, 1.3rem);
 }
 Nav a:hover {
   color: #fca146;
@@ -121,6 +121,7 @@ Nav a:hover {
 }
 input,
 select {
+  flex: 1;
   padding: 0.5rem;
   color: #000000;
   background-color: rgb(227, 227, 227);
