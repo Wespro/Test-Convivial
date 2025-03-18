@@ -96,7 +96,7 @@ Nav a:hover {
 .searchWrapper {
   padding: 2% 8%;
 }
-form {
+.searchWrapper form {
   display: flex;
   justify-content: center;
 }
@@ -121,11 +121,13 @@ form {
 }
 input,
 select {
-  padding: 0.5rem 1rem;
-
+  padding: 0.5rem;
   color: #000000;
   background-color: rgb(227, 227, 227);
   border-radius: 4px;
+}
+#destination {
+  font-size: clamp(0.5rem, 2vw, 1rem);
 }
 input[type='number'] {
   width: 5rem;
@@ -211,7 +213,7 @@ input[type='number'] {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   padding: 1rem 0 0;
 }
 
@@ -219,7 +221,7 @@ input[type='number'] {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  justify-content: center;
+
   flex: 1;
 }
 
@@ -250,6 +252,7 @@ input[type='number'] {
 
 .newsletter-form {
   display: flex;
+
   flex-wrap: wrap;
   gap: 1rem;
 }
