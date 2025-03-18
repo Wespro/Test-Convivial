@@ -1,6 +1,5 @@
 #root {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   position: relative;
@@ -62,7 +61,7 @@ nav .logo {
   object-position: center;
   object-fit: contain;
 }
-ul {
+nav ul {
   width: clamp(15rem, 20vw, 50rem);
   display: flex;
   justify-content: space-between;
@@ -96,14 +95,13 @@ Nav a:hover {
 /* search */
 .searchWrapper {
   padding: 2% 8%;
+}
+form {
   display: flex;
   justify-content: center;
-  border-radius: 4px;
-  position: static;
-  z-index: 1;
 }
 .controls {
-  flex: 1 0 300px;
+  flex: 1 0 100px;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -119,11 +117,12 @@ Nav a:hover {
   flex-direction: column;
   gap: 0.5rem;
   color: rgb(255, 255, 255);
-  flex: 1 0 auto;
+  flex: 1;
 }
 input,
 select {
   padding: 0.5rem 1rem;
+
   color: #000000;
   background-color: rgb(227, 227, 227);
   border-radius: 4px;
@@ -132,7 +131,7 @@ input[type='number'] {
   width: 5rem;
 }
 .controls button {
-  flex: 1 0 auto;
+  flex: 1;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   background-color: #ff9832;
@@ -226,18 +225,13 @@ input[type='number'] {
 
 .quickLinks {
   display: flex;
-
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-section h3 {
   color: #ffb700;
   font-weight: bold;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
 }
 
 .footer-section ul li {
@@ -256,14 +250,12 @@ input[type='number'] {
 
 .newsletter-form {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .newsletter-form input {
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  flex-grow: 1;
+  width: clamp(10rem, 20vw, 50rem);
 }
 
 .newsletter-form button {
@@ -293,6 +285,7 @@ input[type='number'] {
 .social-links {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 .social-links a {
   color: #fff;
