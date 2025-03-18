@@ -1,5 +1,5 @@
 import React from 'react';
-import HotelCard from './hotelCard';
+import HotelCard from './HotelCard';
 
 const Hotels = () => {
   return (
