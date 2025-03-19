@@ -89,50 +89,7 @@ Nav a:hover {
 .menuB svg:last-child {
   display: none;
 }
-@media only screen and (max-width: 1140px) {
-  nav {
-    padding: 0 1rem 0 0;
-  }
-  .menuB {
-    display: flex;
-  }
 
-  nav {
-    position: relative;
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #fd9337;
-    border-radius: 14px;
-    padding: 1rem 0.5rem;
-    color: #000000;
-    width: 8rem;
-    bottom: -158px;
-    right: 80px;
-  }
-  Nav a {
-    color: #000000;
-  }
-  Nav a:hover {
-    color: #e6e6e6;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .menuB {
-    font-size: 1.3rem;
-  }
-  nav ul {
-    bottom: -150px;
-    right: 30px;
-  }
-  .controls label {
-    width: 5rem;
-  }
-}
 /* main */
 .backGroundImage {
   position: absolute;
@@ -374,4 +331,50 @@ a:hover {
   color: #ff9832;
   font-weight: bold;
   text-shadow: 1px 1px 2px black;
+}
+
+/* @media */
+@media only screen and (max-width: 1140px) {
+  nav {
+    padding: 0 1rem 0 0;
+  }
+  .menuB {
+    display: flex;
+  }
+
+  nav {
+    position: relative;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fd9337;
+    border-radius: 14px;
+    padding: 1rem 0.5rem;
+    color: #000000;
+    width: 8rem;
+    bottom: -158px;
+    right: 80px;
+  }
+  Nav a {
+    color: #000000;
+  }
+  Nav a:hover {
+    color: #e6e6e6;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .menuB {
+    font-size: 1.3rem;
+  }
+  nav ul {
+    bottom: -150px;
+    right: 30px;
+  }
+  .controls label {
+    width: 5rem;
+  }
 }
