@@ -1,7 +1,5 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
 ## Prerequisites
 
 Before getting started, make sure you have the following installed:
@@ -13,8 +11,6 @@ Before getting started, make sure you have the following installed:
 - **[React ICons](https://react-icons.github.io/react-icons/)** (for ICons)
 
 ## Link for Display
-
-Before getting started, make sure you have the following installed:
 
 - **(https://abdelrahmanassasmentconvivial.netlify.app/)**
 
