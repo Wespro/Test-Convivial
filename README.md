@@ -2,6 +2,17 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Prerequisites
+
+Before getting started, make sure you have the following installed:
+
+- **[React](https://reactjs.org/)** (version 14.x or higher)  
+  <img src="https://reactjs.org/logo-og.png" alt="React Logo" width="30px" height="30px" />
+- **[Axios](https://axios-http.com/)** (for making HTTP requests)  
+  <img src="https://axios-http.com/assets/axios-logo-3f8b1a.png" alt="Axios Logo" width="30px" height="30px" />
+- **[npm](https://www.npmjs.com/)** (comes with Node.js)  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Npm-logo.svg" alt="npm Logo" width="30px" height="30px" />
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
