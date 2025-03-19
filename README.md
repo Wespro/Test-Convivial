@@ -6,12 +6,17 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Before getting started, make sure you have the following installed:
 
-- **[React](https://reactjs.org/)** (version 14.x or higher)  
-  <img src="https://reactjs.org/logo-og.png" alt="React Logo" width="30px" height="30px" />
-- **[Axios](https://axios-http.com/)** (for making HTTP requests)  
-  <img src="https://axios-http.com/assets/axios-logo-3f8b1a.png" alt="Axios Logo" width="30px" height="30px" />
-- **[npm](https://www.npmjs.com/)** (comes with Node.js)  
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Npm-logo.svg" alt="npm Logo" width="30px" height="30px" />
+- **[React](https://reactjs.org/)** (version 18.x or higher)
+
+- **[Axios](https://axios-http.com/)** (for making HTTP requests)
+
+- **[React ICons](https://react-icons.github.io/react-icons/)** (for ICons)
+
+## Link for Display
+
+Before getting started, make sure you have the following installed:
+
+- **(https://abdelrahmanassasmentconvivial.netlify.app/)**
 
 Currently, two official plugins are available:
 
