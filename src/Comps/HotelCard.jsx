@@ -1,24 +1,27 @@
 import React from 'react';
 
-const HotelCard = () => {
+const HotelCard = ({ hotel }) => {
   return (
     <div className='hotelCard'>
       <div className='imageWrapper'>
-        <img
-          src='https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          alt='hotel image'
-        />
+        <img src={hotel.image_url} alt={hotel.name} />
       </div>
       <div className='hotelInfo'>
-        <h2 className='hotelTitle'>Hotel Title</h2>
+        <h2 className='hotelTitle'>{hotel.name}</h2>
         <div className='pricePerNight'>
           <h3>price Per Night:</h3>
-          <p className='price'>30$</p>
+          <p className='price'>{hotel.price1} </p>
         </div>
         <label htmlFor='roomTypes'>
           <h3>Room Types:</h3>
           <select name='roomTypes' id='roomTypes'>
-            <option value='single'>Single</option>
+            {hotel.roomTypes.map((type, index) => {
+              return (
+                <option key={type + index} value={type}>
+                  {type}
+                </option>
+              );
+            })}
           </select>
         </label>
       </div>

@@ -398,11 +398,15 @@ export const fetchDataGeneral = async (config) => {
 
     // Replica
 
-    const citiesArr = mokcropsReplica.map((info) => {
-      return {
-        cityName: info.details['geo_name'],
-        cityId: info.details['parent_id'],
-      };
+    const citiesArr = mokcropsReplica.map((info, index) => {
+      if (index <= 5 && info.details['parent_id'] !== 34606) {
+        return {
+          cityName: info.details['geo_name'],
+          cityId: info.details['parent_id'],
+        };
+      } else {
+        return null;
+      }
     });
 
     return citiesArr;
@@ -416,36 +420,6 @@ export const fetchDataGeneral = async (config) => {
     } else {
       console.error(`Error in setting up request: ${error.message}`);
     }
-    return 'Sorry there was a problem try searching again';
-  }
-};
-
-export const fetchHotelsInCity = async (config) => {
-  try {
-    // real api  request code
-
-    // const res = await axios.request(config);
-
-    // return(res.data);
-
-    // Replica
-
-    const citiesArr = mokcropsReplica.map((info) => {
-      return {
-        cityName: info.details['parent_id'],
-        cityId: info.details['grandparent_name'],
-      };
-    });
-    return citiesArr;
-  } catch (error) {
-    if (error.response) {
-      console.error(`Server responded with status:${error.response.status}`);
-      console.error(`Response data: ${error.response.data}`);
-      console.error(`Headers: ${error.response.headers}`);
-    } else if (error.request) {
-      console.error(`No response received: ${error.request}`);
-    } else {
-      console.error(`Error in setting up request: ${error.message}`);
-    }
+    return 'Sorry there was a problem try searching again with different values';
   }
 };

@@ -45,8 +45,11 @@ const Footer = () => {
 
       <div className='footer-bottom'>
         <p>
-          &copy; {new Date().getFullYear()} OASIS HOTEL Hotel. All rights
-          reserved.
+          &copy; {new Date().getFullYear()}{' '}
+          <a href='https://github.com/Wespro/Test-Convivial'>
+            Abdelrahman Mohamed
+          </a>
+          . All rights reserved.
         </p>
         <div className='social-links'>
           <a href='#'>Facebook</a>

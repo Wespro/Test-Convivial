@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HotelCard from './HotelCard';
 
-const Hotels = () => {
+const Hotels = ({ filteredHotels }) => {
   return (
     <div className='hotelsWrapper'>
-      <HotelCard />
-      <HotelCard />
-      <HotelCard />
-      <HotelCard />
-      <HotelCard />
-      <HotelCard />
+      {filteredHotels?.map((hotel, index) => {
+        return <HotelCard key={hotel + index} hotel={hotel} />;
+      })}
     </div>
   );
 };

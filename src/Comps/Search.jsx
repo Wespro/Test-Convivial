@@ -1,28 +1,58 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { roomTypes } from './roomTypesArr';
 
-const Search = ({ searchQueries, setSearchQueries, cities }) => {
+const Search = ({
+  searchQueries,
+  setSearchQueries,
+  cities,
+  setSearchOn,
+  searchInputs,
+  setSearchInputs,
+}) => {
+  const form = useRef(null);
   const handelInputs = (e) => {
     const { name, value } = e.target;
-    setSearchQueries({ ...searchQueries, [name]: value });
+    setSearchInputs({ ...searchInputs, [name]: value });
+    searchQueries.hasOwnProperty(name) &&
+      setSearchQueries({ ...searchQueries, [name]: value });
   };
+  const handelSearchBtn = (e) => {
+    const result = form.current.checkValidity();
+    if (result) {
+      e.preventDefault();
+      setSearchOn(true);
+      setTimeout(() => setSearchOn(false), 0);
+    }
+  };
+  // useEffect(() => {
+
+  //   return () => {
+
+  //   }
+  // }, []);
   return (
     <div className='searchWrapper'>
-      <form action=''>
+      <form ref={form}>
         <div className='controls'>
-          <label htmlFor='destination'>
+          <label className='destinationLable' htmlFor='destination'>
             Destination
             <select
               name='destination'
               id='destination'
               onChange={handelInputs}
-              value={searchQueries.destination}
+              value={searchInputs.destination}
               required
             >
-              {cities.map((city, index) => (
-                <option key={city.cityName + index} value={city.cityName}>
-                  {city.cityName}
-                </option>
-              ))}
+              {cities.map((city, index) => {
+                if (city !== null) {
+                  return (
+                    <option key={city.cityName + index} value={city.cityName}>
+                      {city.cityName}
+                    </option>
+                  );
+                }
+                return null;
+              })}
             </select>
           </label>
           <label htmlFor='checkIn'>
@@ -31,19 +61,19 @@ const Search = ({ searchQueries, setSearchQueries, cities }) => {
               type='date'
               name='checkIn'
               id='checkIn'
+              value={searchInputs.checkIn}
               onChange={handelInputs}
-              value={searchQueries.checkIn}
               required
             />
           </label>
-          <label htmlFor='checkIn'>
-            Check In Date
+          <label htmlFor='checkOut'>
+            Check out Date
             <input
               type='date'
-              name='checkout'
-              id='checkout'
+              name='checkOut'
+              id='checkOut'
               onChange={handelInputs}
-              value={searchQueries.checkout}
+              value={searchInputs.checkOut}
               required
             />
           </label>
@@ -54,7 +84,7 @@ const Search = ({ searchQueries, setSearchQueries, cities }) => {
               name='adultsNum'
               id='adultsNum'
               onChange={handelInputs}
-              value={searchQueries.adultsNum}
+              value={searchInputs.adultsNum}
               required
               max={30}
               min={1}
@@ -63,12 +93,11 @@ const Search = ({ searchQueries, setSearchQueries, cities }) => {
           <label htmlFor='adultsNum'>
             How Many adults ?
             <input
-              defaultValue='0'
               type='number'
               name='childrenNum'
               id='childrenNum'
               onChange={handelInputs}
-              value={searchQueries.childrenNum}
+              value={searchInputs.childrenNum}
               max={10}
               required
             />
@@ -77,17 +106,21 @@ const Search = ({ searchQueries, setSearchQueries, cities }) => {
             Rooms
             <select
               onChange={handelInputs}
-              value={searchQueries.roomTypes}
-              defaultValue='SingleRooms'
-              name='roomTypes'
-              id='roomTypes'
+              value={searchInputs.roomTypes}
+              name='roomType'
+              id='roomType'
               required
             >
-              <option value='all'>All</option>
-              <option value='SingleRooms'>Single Rooms</option>
+              {roomTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
             </select>
           </label>
-          <button className='search'>Search</button>
+          <button onClick={handelSearchBtn} className='search'>
+            Search
+          </button>
         </div>
       </form>
     </div>
