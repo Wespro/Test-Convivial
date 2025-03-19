@@ -119,9 +119,15 @@ Nav a:hover {
   }
 }
 @media only screen and (max-width: 700px) {
+  .menuB {
+    font-size: 1.3rem;
+  }
   nav ul {
     bottom: -150px;
-    right: 40px;
+    right: 30px;
+  }
+  .controls label {
+    width: 5rem;
   }
 }
 /* main */
@@ -148,7 +154,7 @@ Nav a:hover {
   justify-content: center;
 }
 .controls {
-  flex: 1 0 100px;
+  flex: 1;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -175,9 +181,6 @@ select {
   color: #000000;
   background-color: rgb(227, 227, 227);
   border-radius: 4px;
-}
-.destinationLable {
-  min-width: 10rem;
 }
 
 .controls button {
@@ -254,6 +257,7 @@ select {
   color: #000000;
   font-size: 1.2rem;
   font-weight: bold;
+  padding: 1rem;
 }
 /* footer */
 .footer {
