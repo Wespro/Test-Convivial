@@ -30,7 +30,7 @@ function App() {
     roomType: 'Single',
   });
 
-  ///the free version of Mokcops api has finished due to too many api calls so i am doing a replica
+  ///the free version of Mokcorps api has finished due to too many api calls so i am doing a replica
   const apiKey = import.meta.env.VITE_MACKORPS_APIKEY;
   let configGeneral = {
     method: 'get',

@@ -1,5 +1,9 @@
 # React + Vite
 
+## Announcement
+
+- The free version of Mokcorps api has finished due to too many api calls so i am doing a replica.
+
 ## Prerequisites
 
 Before getting started, make sure you have the following installed:
